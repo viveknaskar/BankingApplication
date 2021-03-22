@@ -1,5 +1,9 @@
 package com.viveknaskar.bankaccountapp;
 
+/**
+ * Checking Account holders are assigned with Debit card with
+ * 12-digit number accessed with 4-digit PIN
+ */
 public class Checking extends Account{
 
     /**
@@ -14,6 +18,12 @@ public class Checking extends Account{
     public Checking(String name, String socialSecurityNumber, double initDeposit) {
         super(name, socialSecurityNumber, initDeposit);
         accountNumber = "2" + accountNumber;
+        setDebitCard();
+    }
+
+    private void setDebitCard() {
+        debitCardNumber = (int) (Math.random() * Math.pow(10, 12));
+        debitCardPin = (int) (Math.random() * Math.pow(10, 4));
     }
 
     /**
@@ -21,7 +31,12 @@ public class Checking extends Account{
      */
 
     public void showInfo() {
-        super.showInfo();
         System.out.println("Account type: Checking");
+        super.showInfo();
+        System.out.println(
+            " Your Checking Account features: " +
+            "\n Debit Card Number: " + debitCardNumber +
+            "\n Debit Card PIN: " + debitCardPin
+        );
     }
 }
