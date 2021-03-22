@@ -21,6 +21,14 @@ public class Savings extends Account {
         setSafetyDepositBox();
     }
 
+    /**
+     * Savings Account rate will use 0.25 less than the base interest rate
+     */
+    @Override
+    public void setRate() {
+        rate = getBaseRate() - 0.25;
+    }
+
     private void setSafetyDepositBox() {
         safetyDepositBoxId = (int) (Math.random() * Math.pow(10, 3));
         safetyDepositBoxKey = (int) (Math.random() * Math.pow(10, 4));

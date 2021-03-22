@@ -32,7 +32,19 @@ public abstract class Account implements IBaseRate {
          */
         index++;
         this.accountNumber = setAccountNumber();
+
+        /**
+         * Calling the setRate method which will call the implemented method
+         * from Checking or Savings class
+         */
+        setRate();
     }
+
+    /**
+     * Making this method as abstract so that Savings/Checking Classes will
+     * override this and provide an implementation
+     */
+    public abstract void setRate();
 
     /**
      * 11-digit Account Number should have the below requirements:
@@ -61,7 +73,8 @@ public abstract class Account implements IBaseRate {
         System.out.println(
                 "Name: " + name +
                 "\nAccount Number: " + accountNumber +
-                "\nBalance: " + balance
+                "\nBalance: " + balance +
+                "\nInterest rate: " + rate + "%"
         );
     }
 }

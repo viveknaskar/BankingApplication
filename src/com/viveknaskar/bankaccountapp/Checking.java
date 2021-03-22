@@ -21,6 +21,14 @@ public class Checking extends Account{
         setDebitCard();
     }
 
+    /**
+     * Checking Account rate will use 15% of the base interest rate
+     */
+    @Override
+    public void setRate() {
+        rate = getBaseRate() * 0.15;
+    }
+
     private void setDebitCard() {
         debitCardNumber = (int) (Math.random() * Math.pow(10, 12));
         debitCardPin = (int) (Math.random() * Math.pow(10, 4));
@@ -39,4 +47,5 @@ public class Checking extends Account{
             "\n Debit Card PIN: " + debitCardPin
         );
     }
+
 }
