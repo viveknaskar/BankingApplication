@@ -13,6 +13,8 @@ public class Checking extends Account{
      */
     public Checking(String name, String socialSecurityNumber, double initDeposit) {
         super(name, socialSecurityNumber, initDeposit);
+        accountNumber = "2" + accountNumber;
+        System.out.println("Account Number: " + this.accountNumber);
         System.out.println("New Checking Account.");
     }
 

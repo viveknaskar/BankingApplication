@@ -33,11 +33,11 @@ public abstract class Account implements IBaseRate {
          */
         index++;
         this.accountNumber = setAccountNumber();
-        System.out.println("Account Number: " + this.accountNumber);
     }
 
     /**
-     * Account Number should have the below requirements:
+     * 11-digit Account Number should have the below requirements:
+     * 1 for Savings and 2 for Checking (is being set by Savings/Checking class)
      * last two digits of SSN
      * unique 5-digit number
      * random 3-digit number
@@ -49,7 +49,6 @@ public abstract class Account implements IBaseRate {
         int uniqueId = index;
         int randomNumber = (int) (Math.random() * Math.pow(10, 3));
         return lastTwoOfSSN + uniqueId + randomNumber;
-
     }
 
     /**
