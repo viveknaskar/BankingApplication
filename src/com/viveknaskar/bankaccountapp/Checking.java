@@ -9,8 +9,8 @@ public class Checking extends Account{
     /**
      * List the properties specific to Checking account
      */
-    int debitCardNumber;
-    int debitCardPin;
+    private int debitCardNumber;
+    private int debitCardPin;
 
     /**
      * Constructor to initialize Checking account properties

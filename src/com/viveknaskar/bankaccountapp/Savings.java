@@ -9,8 +9,8 @@ public class Savings extends Account {
     /**
      * List the properties specific to Savings account
      */
-    int safetyDepositBoxId;
-    int safetyDepositBoxKey;
+    private int safetyDepositBoxId;
+    private int safetyDepositBoxKey;
 
     /**
      * Constructor to initialize Savings account properties
