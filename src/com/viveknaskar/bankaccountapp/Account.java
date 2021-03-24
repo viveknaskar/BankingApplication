@@ -56,7 +56,7 @@ public abstract class Account implements IBaseRate {
      */
     private String setAccountNumber() {
         String lastTwoOfSSN = socialSecurityNumber
-                .substring(socialSecurityNumber.length()-2, socialSecurityNumber.length());
+                .substring(socialSecurityNumber.length()-2);
         int uniqueId = index;
         int randomNumber = (int) (Math.random() * Math.pow(10, 3));
         return lastTwoOfSSN + uniqueId + randomNumber;
