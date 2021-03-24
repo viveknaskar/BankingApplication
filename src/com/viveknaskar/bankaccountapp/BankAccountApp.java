@@ -11,9 +11,7 @@ public class BankAccountApp {
 
         Savings savingsAccount1 = new Savings("Clark Kent", "987654321", 2800);
         savingsAccount1.showInfo();
-        savingsAccount1.deposit(10000);
-        savingsAccount1.withdraw(1000);
-        savingsAccount1.transfer("Home loan",3000);
+        savingsAccount1.compound();
 
         /**
          * Read a CSV file and create new accounts base on the data
